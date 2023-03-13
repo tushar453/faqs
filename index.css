@@ -1,0 +1,202 @@
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+    
+    
+    background: #03001C;
+
+}
+
+.container{
+    margin: 0 40px;
+    /* width: 600px;
+    height: 400px; */
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   /* border: 1px solid black; */
+}
+.container h1{
+    color: #333;
+}
+.container .tab{
+    position: relative;
+    background: #fff;
+    padding: 0 20px 20px;
+    box-shadow: 0 15px 25px rgba(0 , 0 ,0 ,0.05 );
+    border-radius: 5px;
+    overflow: hidden;
+
+
+}
+
+.container .tab input{
+    appearance: none;
+}
+
+.container .tab label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .tab label::after{
+    content: '+';
+    position: absolute;
+    right: 20px;
+    font-size: 2em;
+    color: rgba(0, 0, 0, 0.1);
+    transition: transform 1s ;
+}
+.container .tab:hover label::after{
+    color: #333;
+
+}
+
+.container .tab input:checked ~ label::after{
+  transform: rotate(135deg);  
+  color: #fff;
+}
+
+.container .tab label h2{
+   width: 40px;
+   height: 40px;
+   background: #333;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #B6EADA;
+   font-size: 1.25rem;
+   border-radius:5px ;
+   margin-right: 10px;
+
+}
+.container .tab:nth-child(2) label h2
+{
+    background: linear-gradient(135deg ,#301E67);
+}
+
+.container .tab:nth-child(3) label h2
+{
+    background: linear-gradient(135deg ,#301E67);
+}
+
+.container .tab:nth-child(4) label h2
+{
+    background: linear-gradient(135deg ,#301E67);
+}
+
+.container .tab:nth-child(5) label h2
+{
+    background: linear-gradient(135deg ,#301E67);
+}
+.container .tab label h3{
+    position: relative;
+    font-weight:500 ;
+    color: #301E67;
+    z-index: 10;}
+
+
+.container .tab  .content{
+    max-height: 0;
+    transition: 1s;
+    overflow: hidden;
+
+}
+
+
+
+
+.container .tab input:checked~.content{
+
+
+    max-height: 100vh;
+
+}
+
+.container .tab .content p{
+    position: relative;
+    padding: 10px 0;
+    color: #301E67;
+    z-index: 10;
+}
+ 
+ .container .tab input:checked ~label h2{
+ position: absolute;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color:255 ,255,255,0.2 ;
+  font-size: 8em;
+  justify-content:flex-end ;
+  padding:20px ; 
+
+ }
+
+ .container .tab input:checked ~ label h3{
+/* background: grey; */
+padding: 2px 10px ;
+color: #fff;
+border-radius: 2px;
+box-shadow:0 5px 15px rgba(0 , 0 ,0 ,0.05 ) ;
+ }
+
+.container .tab input:checked ~.content p{
+  color: #fff;
+  width: 400px;
+
+} 
+
+.container i{
+    position:absolute;
+    width:350px;
+    top:70px;
+    border-radius:30px;
+    height:50px;
+    background:#af43f1;
+      /* left:6px; */
+    /* left:320px; */
+    border-radius:30px;
+    border-bottom-left-radius:0;
+    z-index:10;
+
+}
+.container i h3{
+          position: absolute;
+          margin: 10px 30px;
+          font-size: 19px;    
+}
+.container i::before{
+content:'';
+position:absolute;
+width:20px;
+height:35px;
+background:#8045c6 ;
+top:50px;
+
+border-top-left-radius:20px ;
+border-bottom-left-radius:20px;
+z-index:2;
+
+}
+.container i::after{
+content:'';
+position:absolute;
+top:50px;
+width:20px;
+height:17px;
+background: #af43f1;
+z-index:1;
+}
